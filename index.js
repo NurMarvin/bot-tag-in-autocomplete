@@ -1,5 +1,6 @@
 const { Plugin } = require('powercord/entities');
 const { React, getModule, getModuleByDisplayName } = require('powercord/webpack');
+const { inject, uninject } = require('powercord/injector');
 
 module.exports = class BotTagInAutocomplete extends Plugin {
   async startPlugin() {
@@ -8,8 +9,7 @@ module.exports = class BotTagInAutocomplete extends Plugin {
     const { marginLeft8 } = getModule(['marginLeft8'], false);
     const autocomplete = await getModule(['getAutocompleteOptions']);
 
-    autocomplete.getAutocompleteOptions = (getAutocompleteOptions => (e, t, n, r, a) => {
-      const autocompleteOptions = getAutocompleteOptions(e, t, n, r, a);
+    inject('bot-tag-in-autocomplete', autocomplete, 'getAutocompleteOptions', function (_, autocompleteOptions) {
       const renderResults = autocompleteOptions.MENTIONS.renderResults;
 
       autocompleteOptions.MENTIONS.renderResults = function (...args) {
@@ -50,6 +50,10 @@ module.exports = class BotTagInAutocomplete extends Plugin {
       }
 
       return autocompleteOptions;
-    })(autocomplete.__getAutocompleteOptions = autocomplete.getAutocompleteOptions);
+    });
+  }
+
+  pluginWillUnload() {
+    uninject('bot-tag-in-autocomplete');
   }
 }
