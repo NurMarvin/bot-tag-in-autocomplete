@@ -15,7 +15,7 @@ We even support this cool looking checkmark for verified bots to make your life 
 ## Installation
 
 You're probably totally stoked to learn how to install this bad boy, right? \
-It's real simple! Just follow our certified installation guide and you'll never have to worry about confusing bots for humans or the other way around:
+It's real simple! Just follow our certified installation guide and you'll never have to worry about confusing bots for humans or the other way around again:
 
 1. Clone this repository into your Powercord plugins folder using `git clone https://github.com/NurMarvin/bot-tag-in-autocomplete.git` 
 2. Reload Discord using `Ctrl + R` 
