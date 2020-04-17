@@ -1,0 +1,7 @@
+{
+    "name": "Bot Tag in Autocomplete",
+    "description": "Small plugin that adds a bot tag behind bots in the autocomplete box",
+    "author": "NurMarvin",
+    "version": "1.0.0",
+    "license": "MIT"
+}
