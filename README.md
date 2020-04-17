@@ -3,7 +3,7 @@ Ever had issues with telling bots and normal users apart when trying to mention 
 
 <img src="https://i.imgur.com/5uvf1AK.png" width="480" height="304"/>
 
-Well... worry no more! We got you covered.
+Well... worry no more! We got you covered. \
 With our new revolutionary "Bot Tag in Autocomplete" plugin for the Powercord software you can now tell huuuuumans 🧑‍🤝‍🧑 and rooooobots 🤖 apart!
 
 <img src="https://i.imgur.com/I6LYpvX.png" width="480" height="304"/>
